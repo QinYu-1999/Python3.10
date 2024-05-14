@@ -25,6 +25,7 @@ class TestFile:
 
     def test_alert(self):
         url = self.driver.get("https://www.runoob.com/try/try.php?filename=jqueryui-api-droppable")
+
         logger.debug('打开网页')
         self.driver.maximize_window()
         self.driver.switch_to.frame("iframeResult")
