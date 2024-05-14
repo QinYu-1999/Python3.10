@@ -1,0 +1,39 @@
+{% load static %}
+{% load jp %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="color: red">登录首页{{ n1}}</h1>
+<ul>{%for e in n2 %}
+    <li>{{ e }}</li>
+    {% endfor %}
+</ul>
+<p>{{ n3.name }}</p>
+<p>{{ n3.age }}</p>
+<ul>
+{#    {% for item in n3.keys %}#}
+{#    {% for item in n3.values %}#}
+    {% for k,v in n3.items %}
+        <li>{{ k }} == {{ v }}</li>
+    {% endfor %}
+</ul>
+<hr/>
+<p>{{ n4.name }}</p>
+<p>{{ n4.age }}</p>
+<p>{{ n4.get_data }}</p>
+<p>{{ n5|lower }} or {{ n5|upper }}</p>
+<p>{{ n6 }}</p>
+<p>{{ n6|date:'Y-m-d H:i:s' }}</p>
+<p>{{ n7 }}</p>
+<p>{{ n5|myfunc }}</p>
+<p>{% mytag1 %}    {% mytag2 '123' '28991' %}</p>
+<p>{% xxx %}</p>
+<script src="{% static 'app01/v01.js' %}">
+        {#alert("{{ n2 }}")#}
+</script>
+</body>
+</html>
