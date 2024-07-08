@@ -11,7 +11,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
-from web import web_1, test_wait
+from web import web_1, test_wait,test_lufei
 
 
 def print_hi(name):
@@ -79,8 +79,7 @@ def test_xpath():
     driver.quit()
 
 if __name__ == '__main__':
-    test_wait.wait_unit()
-    # start()
+    test_lufei.LuFei.test_login()
     # start_element_interactions()
     # element_css()
     # test_xpath()
